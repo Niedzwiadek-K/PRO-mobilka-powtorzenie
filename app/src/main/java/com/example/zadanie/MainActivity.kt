@@ -99,6 +99,7 @@ class MainActivity : ComponentActivity() {
     }
     fun onDelete() {
         val randomIndex = Studenci.indices.randomOrNull() ?: return
+        println(Studenci.get(randomIndex))
         Studenci = Studenci.toMutableList().apply { removeAt(randomIndex) }
     }
 
